@@ -1,0 +1,1 @@
+# [Latest Release](https://github.com/afridho/bible-terjemahan-baru)
