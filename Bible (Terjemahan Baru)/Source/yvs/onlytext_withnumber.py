@@ -5,7 +5,6 @@ import re
 
 query = sys.argv[1]
 
-
 url = 'https://alkitab.sabda.org/api/passage.php?passage='+query
 
 document = requests.get(url)

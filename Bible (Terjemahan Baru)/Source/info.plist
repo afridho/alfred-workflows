@@ -8,8 +8,73 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>1D3B9F03-1F49-45BE-9719-23E60C9E3EC7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5389A5BA-6B3A-4187-9EB8-A8D82B11D6B3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>97CA1D15-0F5A-4508-8A65-ECB28083794F</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6C2DDE35-4496-4BBC-A9BA-0761354210A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7B2DD8AF-D751-4DF0-90F4-0CC271754CE6</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A3562FF8-7CED-405D-BE15-9E2F46ED3ED7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>22829F28-E0DA-4743-B57D-F93770FBB42B</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2323D4A0-11CB-45D1-A1E4-1CC588F7FFC5</key>
 		<array/>
+		<key>2A249753-F0F8-46C1-9134-543CC7D582D3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ABE7AFFA-72A4-4AE0-8AB1-66E39A88BB1F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>385AD3D7-1459-456D-90E8-2C7778FFFF16</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FFE2199A-16EA-4B54-AC99-C0E65CB7954B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>393A642F-DA03-404F-9A94-5397FB31ED43</key>
 		<array>
 			<dict>
@@ -60,7 +125,20 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B6ADBE4E-929A-4A37-B8A9-845570F189D8</string>
+				<string>F03C70CE-80AA-426C-922B-2843D52794FE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6CEE4E23-61E7-4082-B5ED-59C1DF33B9DC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>385AD3D7-1459-456D-90E8-2C7778FFFF16</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -82,11 +160,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>9EEC32B8-4AB6-41AA-93E2-4F842837DF26</key>
+		<key>9332618B-266D-4E29-AB03-BDC1A3D055AF</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>393A642F-DA03-404F-9A94-5397FB31ED43</string>
+				<string>88D0FDBF-27C6-46F1-BCDE-5F7299D8A328</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -94,13 +172,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>9EEC32B8-4AB6-41AA-93E2-4F842837DF26</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5389A5BA-6B3A-4187-9EB8-A8D82B11D6B3</string>
+				<string>6CEE4E23-61E7-4082-B5ED-59C1DF33B9DC</string>
 				<key>modifiers</key>
-				<integer>524288</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Show verse number</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -116,11 +197,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>6C2DDE35-4496-4BBC-A9BA-0761354210A9</string>
+				<string>9332618B-266D-4E29-AB03-BDC1A3D055AF</string>
 				<key>modifiers</key>
-				<integer>655360</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Copy selected verses with *number</string>
+				<string>🩸Options</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -138,11 +219,62 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A3562FF8-7CED-405D-BE15-9E2F46ED3ED7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C97E8158-8D06-470A-A0AB-4FA12940EAF4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ABE7AFFA-72A4-4AE0-8AB1-66E39A88BB1F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1D3B9F03-1F49-45BE-9719-23E60C9E3EC7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D209E86B-7800-465E-947C-001324F6C7FE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>1D3EF4CB-BE7F-401C-B7C7-E4E2C72F2A7A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FFE2199A-16EA-4B54-AC99-C0E65CB7954B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>393A642F-DA03-404F-9A94-5397FB31ED43</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F5131357-EBBD-4E1E-B250-38D36E39BD99</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A3562FF8-7CED-405D-BE15-9E2F46ED3ED7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -217,9 +349,36 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+if [[ $query == *":"* ]]; then
+  echo -n "ayat"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>385AD3D7-1459-456D-90E8-2C7778FFFF16</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>70</integer>
 				<key>script</key>
-				<string>/usr/bin/env python -m yvs.get_sabda "$@"</string>
+				<string>/usr/bin/env python -m yvs.get_sabda "${ayat}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -233,6 +392,26 @@
 			<string>393A642F-DA03-404F-9A94-5397FB31ED43</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>ayat</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6CEE4E23-61E7-4082-B5ED-59C1DF33B9DC</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -262,6 +441,59 @@
 			<string>2323D4A0-11CB-45D1-A1E4-1CC588F7FFC5</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>ayat</string>
+						<key>outputlabel</key>
+						<string>ayat large text</string>
+						<key>uid</key>
+						<string>F5131357-EBBD-4E1E-B250-38D36E39BD99</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>only chapter open web</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>FFE2199A-16EA-4B54-AC99-C0E65CB7954B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>70</integer>
+				<key>script</key>
+				<string>/usr/bin/env python -m yvs.onlytext "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8DA07FC4-B696-48B2-AA53-FD1A4580580E</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -327,6 +559,25 @@
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>BBCAB844-A060-4FA3-857B-4A142F698765</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
 				<true/>
 			</dict>
 			<key>type</key>
@@ -339,25 +590,41 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
 				<false/>
-				<key>escaping</key>
-				<integer>70</integer>
-				<key>script</key>
-				<string>/usr/bin/env python -m yvs.onlytext "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>variables</key>
+				<dict>
+					<key>ayat</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>8DA07FC4-B696-48B2-AA53-FD1A4580580E</string>
+			<string>9332618B-266D-4E29-AB03-BDC1A3D055AF</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>listmenu</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>88D0FDBF-27C6-46F1-BCDE-5F7299D8A328</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -367,7 +634,7 @@
 				<key>escaping</key>
 				<integer>70</integer>
 				<key>script</key>
-				<string>/usr/bin/env python -m yvs.onlytext_withnumber "$@"</string>
+				<string>/usr/bin/env python -m yvs.onlytext_withnumber "${ayat}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -381,6 +648,163 @@
 			<string>6C2DDE35-4496-4BBC-A9BA-0761354210A9</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>arg1</string>
+						<key>outputlabel</key>
+						<string>Show with number</string>
+						<key>uid</key>
+						<string>97CA1D15-0F5A-4508-8A65-ECB28083794F</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>arg2</string>
+						<key>outputlabel</key>
+						<string>Copy with number</string>
+						<key>uid</key>
+						<string>7B2DD8AF-D751-4DF0-90F4-0CC271754CE6</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>arg3</string>
+						<key>outputlabel</key>
+						<string>View on web</string>
+						<key>uid</key>
+						<string>22829F28-E0DA-4743-B57D-F93770FBB42B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>1D3B9F03-1F49-45BE-9719-23E60C9E3EC7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"Show","arg":"arg1","subtitle":"with number"},{"title":"Copy","arg":"arg2","subtitle":"with number"},{"title":"View web","arg":"arg3","subtitle":"open the web"}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>ABE7AFFA-72A4-4AE0-8AB1-66E39A88BB1F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>listmenu</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>2A249753-F0F8-46C1-9134-543CC7D582D3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Safari"	activate	make new document with properties {URL:(q)}	tell application "System Events" to tell process "Safari"		key code 3 using {control down, option down}	end tell  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>C97E8158-8D06-470A-A0AB-4FA12940EAF4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/env python -m yvs.parse_to_bible_web "${ayat}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A3562FF8-7CED-405D-BE15-9E2F46ED3ED7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://github.com/afridho/bible-terjemahan-baru</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1D3EF4CB-BE7F-401C-B7C7-E4E2C72F2A7A</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -403,97 +827,71 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>BBCAB844-A060-4FA3-857B-4A142F698765</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>B6ADBE4E-929A-4A37-B8A9-845570F189D8</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://github.com/afridho/bible-terjemahan-baru</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>1D3EF4CB-BE7F-401C-B7C7-E4E2C72F2A7A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>https://github.com/afridho/bible-terjemahan-baru</string>
 	<key>uidata</key>
 	<dict>
+		<key>1D3B9F03-1F49-45BE-9719-23E60C9E3EC7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>440</integer>
+		</dict>
 		<key>1D3EF4CB-BE7F-401C-B7C7-E4E2C72F2A7A</key>
 		<dict>
 			<key>note</key>
 			<string>Open GitHub</string>
 			<key>xpos</key>
-			<integer>350</integer>
+			<integer>355</integer>
 			<key>ypos</key>
-			<integer>595</integer>
+			<integer>680</integer>
 		</dict>
 		<key>2323D4A0-11CB-45D1-A1E4-1CC588F7FFC5</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
 			<key>xpos</key>
-			<integer>880</integer>
+			<integer>1245</integer>
 			<key>ypos</key>
-			<integer>25</integer>
+			<integer>45</integer>
+		</dict>
+		<key>2A249753-F0F8-46C1-9134-543CC7D582D3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>445</integer>
+		</dict>
+		<key>385AD3D7-1459-456D-90E8-2C7778FFFF16</key>
+		<dict>
+			<key>xpos</key>
+			<integer>335</integer>
+			<key>ypos</key>
+			<integer>15</integer>
 		</dict>
 		<key>393A642F-DA03-404F-9A94-5397FB31ED43</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>Show largetext</string>
 			<key>xpos</key>
-			<integer>470</integer>
+			<integer>835</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>30</integer>
 		</dict>
 		<key>5389A5BA-6B3A-4187-9EB8-A8D82B11D6B3</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>Show largetext with number</string>
 			<key>xpos</key>
-			<integer>510</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>170</integer>
 		</dict>
 		<key>6C2DDE35-4496-4BBC-A9BA-0761354210A9</key>
 		<dict>
@@ -502,9 +900,23 @@
 			<key>note</key>
 			<string>Copy selected text with number (optional for bear)</string>
 			<key>xpos</key>
-			<integer>350</integer>
+			<integer>740</integer>
 			<key>ypos</key>
-			<integer>335</integer>
+			<integer>340</integer>
+		</dict>
+		<key>6CEE4E23-61E7-4082-B5ED-59C1DF33B9DC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>255</integer>
+			<key>ypos</key>
+			<integer>45</integer>
+		</dict>
+		<key>88D0FDBF-27C6-46F1-BCDE-5F7299D8A328</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>325</integer>
 		</dict>
 		<key>8DA07FC4-B696-48B2-AA53-FD1A4580580E</key>
 		<dict>
@@ -513,9 +925,16 @@
 			<key>note</key>
 			<string>Copy selected text (optional for bear)</string>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>305</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>150</integer>
+		</dict>
+		<key>9332618B-266D-4E29-AB03-BDC1A3D055AF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>245</integer>
 		</dict>
 		<key>9EEC32B8-4AB6-41AA-93E2-4F842837DF26</key>
 		<dict>
@@ -533,23 +952,43 @@
 			<key>ypos</key>
 			<integer>185</integer>
 		</dict>
-		<key>B6ADBE4E-929A-4A37-B8A9-845570F189D8</key>
+		<key>A3562FF8-7CED-405D-BE15-9E2F46ED3ED7</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>5</integer>
+			<integer>9</integer>
+			<key>note</key>
+			<string>parse to open bible web</string>
 			<key>xpos</key>
-			<integer>790</integer>
+			<integer>640</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>530</integer>
+		</dict>
+		<key>ABE7AFFA-72A4-4AE0-8AB1-66E39A88BB1F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>195</integer>
+			<key>ypos</key>
+			<integer>445</integer>
 		</dict>
 		<key>BBCAB844-A060-4FA3-857B-4A142F698765</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>515</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>190</integer>
+		</dict>
+		<key>C97E8158-8D06-470A-A0AB-4FA12940EAF4</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>open web</string>
+			<key>xpos</key>
+			<integer>890</integer>
+			<key>ypos</key>
+			<integer>505</integer>
 		</dict>
 		<key>D209E86B-7800-465E-947C-001324F6C7FE</key>
 		<dict>
@@ -558,20 +997,29 @@
 			<key>xpos</key>
 			<integer>40</integer>
 			<key>ypos</key>
-			<integer>385</integer>
+			<integer>680</integer>
 		</dict>
 		<key>F03C70CE-80AA-426C-922B-2843D52794FE</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
 			<key>xpos</key>
-			<integer>895</integer>
+			<integer>1260</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>240</integer>
+		</dict>
+		<key>FFE2199A-16EA-4B54-AC99-C0E65CB7954B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>515</integer>
+			<key>ypos</key>
+			<integer>55</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>2.0.0</string>
 	<key>webaddress</key>
 	<string>gtihub.com/afridho</string>
 </dict>

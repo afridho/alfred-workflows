@@ -22,7 +22,8 @@ LOCAL_DATA_DIR_PATH = os.path.join(
 PACKAGED_CODE_DIR_PATH = os.path.join(os.getcwd(), 'yvs')
 
 # The template used to build the URL for a Bible reference
-REF_URL_TEMPLATE = 'https://www.bible.com/bible/{ref}?parallel=1588'
+# REF_URL_TEMPLATE = 'https://www.bible.com/id/bible/306/{ref}?parallel=1588'
+REF_URL_TEMPLATE = 'https://www.bible.com/id/bible/306/{ref}'
 
 
 

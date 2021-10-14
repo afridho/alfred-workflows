@@ -185,13 +185,14 @@ def get_result(book, query, chosen_version, user_prefs):
         'ref_url': core.get_ref_url(result['arg']),
         'copybydefault': str(user_prefs['copybydefault'])
     }
-    result['quicklookurl'] = result['variables']['ref_url']
+    # result['quicklookurl'] = result['variables']['ref_url']
     result['uid'] = 'yvs-{}'.format(result['arg'])
     # result['title'] += ' ({version})'
     result['subtitle'] = 'Alkitab Terjemahan Baru © TB' 
     result['mods'] = {
         'cmd': {
-            'subtitle': 'Copy content to clipboard'
+            # 'subtitle': 'Copy content to clipboard',
+            'arg': result['arg'],
         }
     }
 
