@@ -14,3 +14,8 @@ Netlify Command, it shows all your personal projects and shortcut to web easily
 MAC OS Speaker select without apple script. So no need to open preferences, just set, and works.
 [Link](https://github.com/afridho/alfred-workflows/tree/master/Speaker)
 [Download](https://github.com/afridho/alfred-workflows/blob/master/Speaker/speaker.alfredworkflow)
+
+### Translator Service
+Google or Bing Translation Service with mod version to show large text results when text selection
+[Link](https://github.com/afridho/alfred-workflows/tree/master/Translator%20Service)
+[Download](https://github.com/pbojkov/alfred-workflow-google-translate)
