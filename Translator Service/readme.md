@@ -8,7 +8,7 @@
 ![screenshot](https://github.com/afridho/alfred-workflows/blob/master/Translator%20Service/ss.jpg?raw=true)
 
 ```bash
-	/usr/bin/env python base_translate_large_text.py "{query}"
+ /usr/bin/env python base_translate_large_text.py "{query}"
 ```
 
 
