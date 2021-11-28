@@ -13,7 +13,6 @@ def get_recent_projects(resi):
     posts = response.json()
     return posts
 
-
 def main(wf):
 
  # Get query from Alfred
