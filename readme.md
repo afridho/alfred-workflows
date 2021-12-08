@@ -1,5 +1,10 @@
 # All Alfred Workflows
 
+### Arti Kata (KBBI)
+Cari definisi kata dari KBBI (Kamus Besar Bahasa Indonesia)
+[Link](https://github.com/afridho/alfred-workflows/tree/master/Arti%20Kata%20(KBBI))
+[Download](https://github.com/afridho/alfred-workflows/blob/master/Arti%20Kata%20(KBBI)/Arti%20Kata%20(KBBI).alfredworkflow)
+
 ### Bible Terjemahan Baru
 It's Indonesian Bible alfred workflows. You can point out easyly what bible verse
 [Link](https://github.com/afridho/alfred-workflows/tree/master/Bible%20(Terjemahan%20Baru))
