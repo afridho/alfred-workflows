@@ -18,7 +18,6 @@ def content():
                 total.append(el.text)
         bible = ' '.join(total)
         print(bible)
-           
 content()
 
 
