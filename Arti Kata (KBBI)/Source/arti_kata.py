@@ -6,6 +6,9 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 from workflow import Workflow
+from collections import OrderedDict
+
+
 
 def get_data(query):
     url = 'http://kateglo.com/index.php?op=1&phrase='+ query +'&lex=&type=&src=&mod=dictionary&srch=Cari'
@@ -18,8 +21,9 @@ def get_data(query):
             keys.append(dt.text.strip())
         for dd in dl.findAll("dd"):
             values.append(dd.text.strip()[2:])
-    return dict(zip(keys, values))
-
+    x = (dict(zip(keys, values)))
+    return OrderedDict(sorted(x.items(), key=lambda t: t[0])) # change (sort) order Dict to normal return
+    
 def large_text(kata, arti):
     """Prettier Large Text to text indent""" 
     if len(arti) < 35:
@@ -53,7 +57,7 @@ def main(wf):
                     )
     else:
             wf.add_item(
-                title="Kata Tidak Ditemukan", icon='not_found.png', valid='True'
+                title="Kata Tidak Ditemukan", icon='not_found.png', valid='True', arg='null'
             )
 
     # Send the results to Alfred as XML
@@ -62,11 +66,3 @@ def main(wf):
 if __name__ == u"__main__":
  wf = Workflow()
  sys.exit(wf.run(main))
-
-
-
-
-
-
-
-
