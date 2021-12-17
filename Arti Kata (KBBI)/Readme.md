@@ -15,13 +15,12 @@ Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 
 ## Command List :robot:
 
-`arti` atau `kata` untuk menggunakan workflow
-
-`⌘ + Enter` Untuk pilihan kata yang berkaitan
-
-`⌘ + L`untuk large type arti kata
-
-`⌘ + C` untuk copy hasil definisi kata
+| Command            | Deskripsi                   |
+|--------------------|-----------------------------|
+| arti atau kata     | menggunakan workflow        |
+| ⌘ + Enter          | pilihan kata yang berkaitan |
+| ⌘ + L              | large type arti kata        |
+| ⌘ + C              | copy hasil definisi kata    |
 
 
 ## Version :firefighter:
