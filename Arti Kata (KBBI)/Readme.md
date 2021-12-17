@@ -1,22 +1,34 @@
-# Arti Kata (KBBI)
+# Arti Kata (KBBI) :book:
 
-cari arti kata di KBBI menggunakan keyword
+Cari arti kata di KBBI menggunakan keyword. Database yang digunakan dari http://kateglo.com
 
-`arti`
 
-atau
 
-`kata`
+## Screenshot :camera:
 
-## Command List
+![Image](images/screnshot.png)
 
-CMD+L untuk large type arti kata
+Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 
-CMD+C untuk copy hasil definisi kata
+![Image](images/screenshot_full.png)
 
-Arti Kata KBBI
 
-## Version
+## Command List :robot:
+
+`arti` atau `kata` untuk menggunakan workflow
+
+`⌘ + Enter` Untuk pilihan kata yang berkaitan
+
+`⌘ + L`untuk large type arti kata
+
+`⌘ + C` untuk copy hasil definisi kata
+
+
+## Version :firefighter:
+
+### 2.0.0
+* Pencarian lebih cepat
+* Pencarian sesuai kata (keyword) atau kata yang berhubungan
 
 #### 1.1.0
 * Fix sort pencarian (agar sesuai kata pencarian)
