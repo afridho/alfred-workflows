@@ -26,7 +26,7 @@ Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 
 ## Version :firefighter:
 
-### 2.0.0
+#### 2.0.0
 * Pencarian lebih cepat
 * Pencarian sesuai kata (keyword) atau kata yang berhubungan
 
@@ -35,4 +35,4 @@ Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 * Menambah Universal Action untuk teks
 
 #### 1.0.0
-Released.
+* Released.
