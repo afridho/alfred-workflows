@@ -104,10 +104,19 @@ def main(wf):
     api.query = args.query
     translations = api.get_translations()
 
-
     for tr in translations:
-            print(clean_words(tr['arg']))
-    
+        wf.add_item(title=clean_words(tr['title']),
+                    subtitle=clean_words(tr['subtitle']),
+                    valid=tr['valid'],
+                    arg=clean_words(tr['arg']),
+                    copytext=clean_words(tr['copytext']),
+                    largetext=clean_words(tr['largetext']),
+                    # quicklookurl=tr['quicklookurl'],
+                    icon=tr['icon'])
+
+    # Send output to Alfred as XML.
+    wf.send_feedback()
+
 if __name__ == '__main__':
     wf = Workflow(update_settings={
         'github_slug': GITHUB_SLUG,
