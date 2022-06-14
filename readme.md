@@ -5,6 +5,7 @@
 | ![Image](Readme/netlify.png)    | Netlify               | Netlify Command, it shows all your personal projects and shortcut to web easily                    | [Link](https://github.com/afridho/alfred-workflows/tree/master/Netlify)                     | [Download](https://github.com/afridho/alfred-workflows/blob/master/Netlify/Netlify.alfredworkfloww)                                |
 | ![Image](Readme/speaker.png)    | Speaker               | MAC OS Speaker select without apple script. So no need to open preferences, just set, and works.   | [Link](https://github.com/afridho/alfred-workflows/tree/master/Speaker)                     | [Download](https://github.com/afridho/alfred-workflows/blob/master/Speaker/speaker.alfredworkflow)                                 |
 | ![Image](Readme/translator.png) | Translator Service    | Google or Bing Translation Service with mod version to show large text results when text selection | [Link](https://github.com/afridho/alfred-workflows/tree/master/Translator%20Service)        | [Download](https://github.com/pbojkov/alfred-workflow-google-translate)                                                            |
+| ![Image](Readme/xpathToSelector.png) | XpathToSelector    | Convert XPath to CSS Selector | [Link](https://github.com/afridho/alfred-workflows/tree/master/XPathToSelector)        | [Download](https://github.com/afridho/alfred-workflows/blob/master/XPathToSelector/XPathToSelector.alfredworkflow)                                                            |
 
 
 <!--- Icon size is 32x32 png-->
