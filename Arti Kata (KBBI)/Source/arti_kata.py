@@ -7,9 +7,25 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 from workflow import Workflow
 from collections import OrderedDict
+import os
+
+try:
+    global_query = sys.argv[1] or ''
+except:
+    raise Exception('No query found')
+
+def bool_convert(string_text):
+    if string_text == "True" or string_text == "1" or string_text == "Yes":
+        return True
+    return False
+
+# environment and variables
+not_found_text = os.getenv('not_found_text') or "Kata Tidak Ditemukan"
+suggestion_option = bool_convert(os.getenv('suggestion_option'))
+baseUrl = os.getenv('base_Url')
 
 def web_url(menu,query): #menu '1' for all words related, '3' for specific word
-    url = 'http://kateglo.com/index.php?op={}&phrase={}&lex=&type=&src=&mod=dictionary&srch=Cari'.format(menu,query)
+    url = '{}/index.php?op={}&phrase={}&lex=&type=&src=&mod=dictionary&srch=Cari'.format(baseUrl, menu,query)
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'} # use user-agent to prevent from blocked
     page = requests.get(url, headers=headers)
     return page.content
@@ -41,7 +57,8 @@ def large_text(kata, arti):
 def copy_text(arti):
     return "(" + arti + ")"
     
-def clean_words(arti):
+def clean_words(arti_source):
+    arti = str(arti_source)
     if arti[:2] == "j ":
         return arti.replace("j ", "")
     elif arti[:6] == "(Olr) ":
@@ -58,6 +75,8 @@ def clean_words(arti):
         return arti.replace("(Dok) ", "").replace("(ki) ", "").replace("(Adm) ", "").replace("(ark) ", "").replace("(Min) ", "").replace("(Tern) ", "")[:-1]
 
 def main(wf):
+    ql_link = '{}/?mod=dictionary&action=view&phrase='.format(baseUrl)
+
     if len(wf.args) == 1:
      query = wf.args[0]
      posts = get_data(3, query)
@@ -67,23 +86,61 @@ def main(wf):
     else:
      query = None
      
-    if posts:
-        for kata, arti in posts.items():
-            wf.add_item(
-                    title=kata.capitalize(),
-                    subtitle=str(clean_words(arti)),
-                    largetext=large_text(kata,str(clean_words(arti))),
-                    copytext=copy_text(str(clean_words(arti))),
-                    quicklookurl= 'http://kateglo.com/?mod=dictionary&action=view&phrase={}'.format(kata),
-                    valid='True',
-                    modifier_subtitles={'cmd': 'Temukan kata yang berkaitan'},
-                    arg=kata
-                    )
-    else:
-            wf.add_item(
-                title="Kata Tidak Ditemukan", icon='not_found.png', valid='True', arg=query, modifier_subtitles={'cmd': 'Cari disemua kata berkaitan'},
-            )
+     
+    if suggestion_option: 
+        if posts:
+            for kata, arti in posts.items():
+                wf.add_item(
+                        title=kata.capitalize(),
+                        subtitle=clean_words(arti),
+                        largetext=large_text(kata,clean_words(arti)),
+                        copytext=copy_text(clean_words(arti)),
+                        quicklookurl= '{}{}'.format(ql_link, kata),
+                        valid='True',
+                        modifier_subtitles={'alt': 'Temukan kata yang berkaitan'},
+                        arg=kata
+                        )
+                
+                
+        else:
+            # query = wf.args[1] 
+            posts = get_data(1, global_query)
+            if posts:
+                for kata, arti in posts.items():
+                    wf.add_item(
+                        title=kata.capitalize(),
+                        autocomplete=kata.capitalize(),
+                        subtitle=clean_words(arti),
+                        largetext=large_text(kata,clean_words(arti)),
+                        copytext=copy_text(clean_words(arti)),
+                        quicklookurl= '{}{}'.format(ql_link, kata),
+                        valid='True',
+                        modifier_subtitles={'alt': 'Temukan kata yang berkaitan'},
+                        arg=kata
+                        )
+            else:
+                wf.add_item(
+                    title=not_found_text, icon='none', valid='True', arg=query, modifier_subtitles={'cmd': 'Cari disemua kata berkaitan'},
+                )
 
+        
+    else:
+        if posts:
+            for kata, arti in posts.items():
+                wf.add_item(
+                        title=kata.capitalize(),
+                        subtitle=clean_words(arti),
+                        largetext=large_text(kata,clean_words(arti)),
+                        copytext=copy_text(clean_words(arti)),
+                        quicklookurl= '{}{}'.format(ql_link, kata),
+                        valid='True',
+                        modifier_subtitles={'alt': 'Temukan kata yang berkaitan'},
+                        arg=kata
+                        )
+        else:
+            wf.add_item(
+                title=not_found_text, icon='none', valid='True', arg=query, modifier_subtitles={'cmd': 'Cari disemua kata berkaitan'},
+                )
     # Send the results to Alfred as XML
     wf.send_feedback()
  
