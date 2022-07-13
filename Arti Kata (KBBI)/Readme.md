@@ -24,6 +24,9 @@ Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 
 
 ## Version :firefighter:
+### 3.0.0
+* Perbaharui pengaturan user Alfred 5+
+* Clean code script Arti Kata
 
 #### 2.0.0
 * Pencarian lebih cepat
