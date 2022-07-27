@@ -12,7 +12,40 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Google Search {query}</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>230F215D-4B21-41AC-8B16-B63199C6BC27</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>59748CFA-081B-4F26-A3AE-090D133BDFB8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -25,7 +58,79 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Google Search {query}</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6C01C151-8A0D-4EBC-A76B-D91B3D9521F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>048808ED-2B4E-4611-8E75-BC802B23006E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BC5CE8DE-149A-41ED-A7A6-8C9DA761F721</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CA54B1C9-3CA3-4B32-AD34-9951DAC46968</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BC5CE8DE-149A-41ED-A7A6-8C9DA761F721</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E0F26C5E-058E-479D-AB84-6799DC41641C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>048808ED-2B4E-4611-8E75-BC802B23006E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -38,7 +143,7 @@
 	<key>createdby</key>
 	<string>afridho</string>
 	<key>description</key>
-	<string></string>
+	<string>Cari Arti Kata di KBBI</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -95,10 +200,71 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>google.search</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>com.boehs.alfred-googler</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
 			<string>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>arti.kata</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>6C01C151-8A0D-4EBC-A76B-D91B3D9521F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>related</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>59748CFA-081B-4F26-A3AE-090D133BDFB8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -118,7 +284,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>kata</string>
+				<string>a</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -151,35 +317,283 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Cari di KBBI</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>E0F26C5E-058E-479D-AB84-6799DC41641C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>python arti_kata.py --full "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search KBBI - Semua Kata Berhubungan</string>
+				<key>title</key>
+				<string>Cari Kata</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>BC5CE8DE-149A-41ED-A7A6-8C9DA761F721</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>related</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>CA54B1C9-3CA3-4B32-AD34-9951DAC46968</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>Arti Kata KBBI</string>
+	<string># Arti Kata (KBBI) 📖
+
+Cari arti kata di KBBI menggunakan keyword. 
+Database yang digunakan saat ini bersumber dari http://kateglo.com
+
+
+
+## Screenshot 📷️
+![Image](images/screnshot.png)
+Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
+![Image](images/screenshot_full.png)
+
+
+
+## Command List 🤖
+
+` arti atau kata ` = menggunakan workflow    
+` ⌘ + Enter ` = pilihan kata yang berkaitan
+` ⌘ + L ` = large type arti kata 
+` ⌘ + C ` = copy hasil definisi kata
+
+
+
+## Version 🧑‍🚒
+#### 3.1.0
+• Menambah alternatif server pilihan
+
+#### 3.0.0
+• Perbaharui pengaturan user Alfred 5+
+• Clean code script Arti Kata
+
+#### 2.0.0
+• Pencarian lebih cepat
+• Pencarian sesuai kata (keyword) atau kata yang berhubungan
+
+#### 1.1.0
+• Fix sort pencarian (agar sesuai kata pencarian)
+• Menambah Universal Action untuk teks
+
+#### 1.0.0
+• Released.</string>
 	<key>uidata</key>
 	<dict>
 		<key>048808ED-2B4E-4611-8E75-BC802B23006E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<real>155</real>
 			<key>ypos</key>
-			<integer>305</integer>
+			<real>310</real>
+		</dict>
+		<key>230F215D-4B21-41AC-8B16-B63199C6BC27</key>
+		<dict>
+			<key>xpos</key>
+			<real>600</real>
+			<key>ypos</key>
+			<real>285</real>
 		</dict>
 		<key>2A6C8B8D-8094-4248-9C39-A36F01C29E26</key>
 		<dict>
 			<key>xpos</key>
-			<integer>230</integer>
+			<real>90</real>
 			<key>ypos</key>
-			<integer>140</integer>
+			<real>35</real>
 		</dict>
 		<key>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<real>295</real>
 			<key>ypos</key>
-			<integer>185</integer>
+			<real>200</real>
+		</dict>
+		<key>59748CFA-081B-4F26-A3AE-090D133BDFB8</key>
+		<dict>
+			<key>xpos</key>
+			<real>725</real>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>6C01C151-8A0D-4EBC-A76B-D91B3D9521F3</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
+		<key>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</key>
+		<dict>
+			<key>xpos</key>
+			<real>530</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>BC5CE8DE-149A-41ED-A7A6-8C9DA761F721</key>
+		<dict>
+			<key>note</key>
+			<string>semua kata berkaitan</string>
+			<key>xpos</key>
+			<real>555</real>
+			<key>ypos</key>
+			<real>440</real>
+		</dict>
+		<key>CA54B1C9-3CA3-4B32-AD34-9951DAC46968</key>
+		<dict>
+			<key>xpos</key>
+			<real>370</real>
+			<key>ypos</key>
+			<real>445</real>
+		</dict>
+		<key>E0F26C5E-058E-479D-AB84-6799DC41641C</key>
+		<dict>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>440</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Ya</string>
+						<string>True</string>
+					</array>
+					<array>
+						<string>Tidak</string>
+						<string>False</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Pilih "Ya" untuk menampilkan sugesti kata yang mirip, bila "Tidak" maka hanya ditampilkan satu kata sesuai pencarian (akses lebih cepat)</string>
+			<key>label</key>
+			<string>Sugesti Pencarian kata</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>suggestion_option</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>Kata Tidak Ditemukan</string>
+				<key>placeholder</key>
+				<string>Kata Tidak Ditemukan</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Info ketika kata yang dicari tidak ditemukan</string>
+			<key>label</key>
+			<string>Tidak Ditemukan (Text)</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>not_found_text</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>kateglo</string>
+						<string>http://kateglo.lostfocus.org</string>
+					</array>
+					<array>
+						<string>kateglo-alternatif</string>
+						<string>https://111.223.254.105</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Pilih server pencarian kata (kamus).</string>
+			<key>label</key>
+			<string>Sumber Pencarian Kata</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>base_Url</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>3.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/afridho</string>
 </dict>

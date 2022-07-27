@@ -27,7 +27,7 @@ baseUrl = os.getenv('base_Url')
 def web_url(menu,query): #menu '1' for all words related, '3' for specific word
     url = '{}/index.php?op={}&phrase={}&lex=&type=&src=&mod=dictionary&srch=Cari'.format(baseUrl, menu,query)
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'} # use user-agent to prevent from blocked
-    page = requests.get(url, headers=headers)
+    page = requests.get(url, headers=headers, verify=False)
     return page.content
 
 def get_data(menu, query):
