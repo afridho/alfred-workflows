@@ -34,7 +34,17 @@
 				<key>destinationuid</key>
 				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
 				<key>modifiers</key>
-				<integer>524288</integer>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>627FAAD3-98D6-413B-A5CE-FD819B7322CB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -80,7 +90,7 @@
 				<key>destinationuid</key>
 				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
 				<key>modifiers</key>
-				<integer>524288</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -261,14 +271,6 @@
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
@@ -318,6 +320,75 @@
 			<integer>3</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>'{query}', {variables}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>627FAAD3-98D6-413B-A5CE-FD819B7322CB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>0BE24FCB-84F4-4CFE-BE40-AECF9DEE5A58</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
+				<key>triggerid</key>
+				<string>related</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>CA54B1C9-3CA3-4B32-AD34-9951DAC46968</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>acceptsfiles</key>
@@ -364,7 +435,7 @@
 				<key>runningsubtext</key>
 				<string>Searching...</string>
 				<key>script</key>
-				<string>python arti_kata.py --full "{query}"</string>
+				<string>python arti_kata.py "{query}" --full</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -384,21 +455,6 @@
 			<string>BC5CE8DE-149A-41ED-A7A6-8C9DA761F721</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>related</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>CA54B1C9-3CA3-4B32-AD34-9951DAC46968</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -426,6 +482,9 @@ Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
 
 
 ## Version 🧑‍🚒
+#### 4.0.0
+• Mengubah ke python native (pencarian lebih cepat)
+
 #### 3.1.0
 • Menambah alternatif server pilihan
 
@@ -448,9 +507,16 @@ Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
 		<key>048808ED-2B4E-4611-8E75-BC802B23006E</key>
 		<dict>
 			<key>xpos</key>
-			<real>155</real>
+			<real>165</real>
 			<key>ypos</key>
-			<real>310</real>
+			<real>280</real>
+		</dict>
+		<key>0BE24FCB-84F4-4CFE-BE40-AECF9DEE5A58</key>
+		<dict>
+			<key>xpos</key>
+			<real>715</real>
+			<key>ypos</key>
+			<real>350</real>
 		</dict>
 		<key>230F215D-4B21-41AC-8B16-B63199C6BC27</key>
 		<dict>
@@ -476,9 +542,16 @@ Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
 		<key>59748CFA-081B-4F26-A3AE-090D133BDFB8</key>
 		<dict>
 			<key>xpos</key>
-			<real>725</real>
+			<real>690</real>
 			<key>ypos</key>
-			<real>250</real>
+			<real>245</real>
+		</dict>
+		<key>627FAAD3-98D6-413B-A5CE-FD819B7322CB</key>
+		<dict>
+			<key>xpos</key>
+			<real>360</real>
+			<key>ypos</key>
+			<real>345</real>
 		</dict>
 		<key>6C01C151-8A0D-4EBC-A76B-D91B3D9521F3</key>
 		<dict>
@@ -499,16 +572,16 @@ Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
 			<key>note</key>
 			<string>semua kata berkaitan</string>
 			<key>xpos</key>
-			<real>555</real>
+			<real>570</real>
 			<key>ypos</key>
-			<real>440</real>
+			<real>520</real>
 		</dict>
 		<key>CA54B1C9-3CA3-4B32-AD34-9951DAC46968</key>
 		<dict>
 			<key>xpos</key>
-			<real>370</real>
+			<real>425</real>
 			<key>ypos</key>
-			<real>445</real>
+			<real>355</real>
 		</dict>
 		<key>E0F26C5E-058E-479D-AB84-6799DC41641C</key>
 		<dict>
@@ -593,7 +666,7 @@ Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>3.1.0</string>
+	<string>4.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/afridho</string>
 </dict>

@@ -24,6 +24,9 @@ Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 
 
 ## Version :firefighter:
+### 4.0.0
+* Mengubah ke python native (pencarian lebih cepat)
+
 ### 3.1.0
 * Menambah alternatif server pilihan
 

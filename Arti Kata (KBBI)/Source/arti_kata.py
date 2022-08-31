@@ -5,14 +5,10 @@ from bs4 import BeautifulSoup
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-from workflow import Workflow
 from collections import OrderedDict
 import os
+import json
 
-try:
-    global_query = sys.argv[1] or ''
-except:
-    raise Exception('No query found')
 
 def bool_convert(string_text):
     if string_text == "True" or string_text == "1" or string_text == "Yes":
@@ -74,76 +70,117 @@ def clean_words(arti_source):
     else:
         return arti.replace("(Dok) ", "").replace("(ki) ", "").replace("(Adm) ", "").replace("(ark) ", "").replace("(Min) ", "").replace("(Tern) ", "")[:-1]
 
-def main(wf):
+def arti_kata(data_menu=None, search=None):
     ql_link = '{}/?mod=dictionary&action=view&phrase='.format(baseUrl)
-
-    if len(wf.args) == 1:
-     query = wf.args[0]
-     posts = get_data(3, query)
-    elif len(wf.args) == 2:
-     query = wf.args[1] 
-     posts = get_data(1, query)
-    else:
-     query = None
-     
-     
+    posts = get_data(data_menu, search)
+    
+    result = []
+    
     if suggestion_option: 
+
         if posts:
             for kata, arti in posts.items():
-                wf.add_item(
-                        title=kata.capitalize(),
-                        subtitle=clean_words(arti),
-                        largetext=large_text(kata,clean_words(arti)),
-                        copytext=copy_text(clean_words(arti)),
-                        quicklookurl= '{}{}'.format(ql_link, kata),
-                        valid='True',
-                        modifier_subtitles={'alt': 'Temukan kata yang berkaitan'},
-                        arg=kata
-                        )
-                
+                result.append({
+                        'title':kata.capitalize(),
+                        'subtitle':clean_words(arti),
+                        'text':{
+                            'copy':copy_text(clean_words(arti)),
+                            'largetype':large_text(kata,clean_words(arti)),
+                        },
+                        'quicklookurl':'{}{}'.format(ql_link, kata),
+                        'valid':True,
+                        'mods':{
+                            'cmd': {
+                                'subtitle': 'Temukan kata yang berkaitan',
+                                'arg' : kata,
+                            }
+                        },
+                        'arg':kata
+                        })    
                 
         else:
-            # query = wf.args[1] 
-            posts = get_data(1, global_query)
+            posts = get_data(1, search)
             if posts:
                 for kata, arti in posts.items():
-                    wf.add_item(
-                        title=kata.capitalize(),
-                        autocomplete=kata.capitalize(),
-                        subtitle=clean_words(arti),
-                        largetext=large_text(kata,clean_words(arti)),
-                        copytext=copy_text(clean_words(arti)),
-                        quicklookurl= '{}{}'.format(ql_link, kata),
-                        valid='True',
-                        modifier_subtitles={'alt': 'Temukan kata yang berkaitan'},
-                        arg=kata
-                        )
+                    result.append({
+                        'title':kata.capitalize(),
+                        'subtitle':clean_words(arti),
+                        'text':{
+                            'copy':copy_text(clean_words(arti)),
+                            'largetype':large_text(kata,clean_words(arti)),
+                        },
+                        'quicklookurl': '{}{}'.format(ql_link, kata),
+                        'valid':True,
+                        'mods':{
+                            'cmd': {
+                                'subtitle': 'Temukan kata yang berkaitan',
+                                'arg' : kata
+                                }
+                        },
+                        'arg':kata
+                        })
             else:
-                wf.add_item(
-                    title=not_found_text, icon='none', valid='True', arg=query, modifier_subtitles={'cmd': 'Cari disemua kata berkaitan'},
-                )
+                result.append({
+                    'title':not_found_text, 
+                    'icon':{
+                        'path': 'not_found.png'
+                    }, 
+                    'valid':True, 'arg':search, 
+                    'mods':{
+                        'cmd': {
+                            'subtitle':'Cari disemua kata berkaitan'
+                            }
+                        },
+                })
 
         
     else:
         if posts:
             for kata, arti in posts.items():
-                wf.add_item(
-                        title=kata.capitalize(),
-                        subtitle=clean_words(arti),
-                        largetext=large_text(kata,clean_words(arti)),
-                        copytext=copy_text(clean_words(arti)),
-                        quicklookurl= '{}{}'.format(ql_link, kata),
-                        valid='True',
-                        modifier_subtitles={'alt': 'Temukan kata yang berkaitan'},
-                        arg=kata
-                        )
+                result.append({
+                        'title':kata.capitalize(),
+                        'subtitle':clean_words(arti),
+                        'text': {
+                            'copy':copy_text(clean_words(arti)),
+                            'largetype':large_text(kata,clean_words(arti)),
+                        },
+                        'quicklookurl': '{}{}'.format(ql_link, kata),
+                        'valid':True,
+                        'mods':{
+                            'alt': {
+                                'subtitle': 'Temukan kata yang berkaitan',
+                                'arg' : kata,
+                            }
+                        },
+                        'arg':kata
+                        })
         else:
-            wf.add_item(
-                title=not_found_text, icon='none', valid='True', arg=query, modifier_subtitles={'cmd': 'Cari disemua kata berkaitan'},
-                )
-    # Send the results to Alfred as XML
-    wf.send_feedback()
- 
+            result.append({
+                'title':not_found_text, 
+                'icon':{
+                        'path': 'not_found.png'
+                    }, 
+                'valid':True, 
+                'arg':'query', 
+                'mods':{
+                    'cmd': {
+                        'subtitle':'Cari disemua kata berkaitan'
+                        }
+                    },
+                })
+    return result
+
+def main():
+    if len(sys.argv) == 2:
+        SEARCH = sys.argv[1]
+        data_menu = 3
+    elif len(sys.argv) == 3:
+        SEARCH = sys.argv[1]
+        data_menu = 1
+        
+    posts  = arti_kata(search=SEARCH, data_menu=data_menu)
+    data = json.dumps({"rerun":1, "items": posts }, indent=4)
+    print(data)
+
 if __name__ == u"__main__":
- wf = Workflow()
- sys.exit(wf.run(main))
+    main()
