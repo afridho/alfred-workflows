@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.afridho.alfred.arti.kata.kbbi.offline</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>048808ED-2B4E-4611-8E75-BC802B23006E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Google Search {query}</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Search KBBI - Kamus Besar Bahasa Indonesia</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>230F215D-4B21-41AC-8B16-B63199C6BC27</key>
+		<array/>
+		<key>2A6C8B8D-8094-4248-9C39-A36F01C29E26</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Google Search {query}</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Search KBBI - Kamus Besar Bahasa Indonesia</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E0F26C5E-058E-479D-AB84-6799DC41641C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>048808ED-2B4E-4611-8E75-BC802B23006E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>afridho</string>
+	<key>description</key>
+	<string>Cari Arti Kata di KBBI</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Arti Kata (KBBI) - Offilne</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>arti</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>python3 -c "from arti_kata_offline import *; main()" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search KBBI - Kamus Besar Bahasa Indonesia</string>
+				<key>title</key>
+				<string>Cari Kata</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2A6C8B8D-8094-4248-9C39-A36F01C29E26</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>google.search</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>com.boehs.alfred-googler</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>230F215D-4B21-41AC-8B16-B63199C6BC27</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>a</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>python3 -c "from arti_kata_offline import *; main()" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search KBBI - Kamus Besar Bahasa Indonesia</string>
+				<key>title</key>
+				<string>Cari Kata</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>048808ED-2B4E-4611-8E75-BC802B23006E</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Cari di KBBI</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>E0F26C5E-058E-479D-AB84-6799DC41641C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Arti Kata (KBBI) - OFFLINE 📖
+
+Cari arti kata di KBBI menggunakan keyword. 
+Workflow ini menggunakan database sendiri (didalam folder workflow), jadi tidak membutuhkan koneksi internet.
+
+
+
+## Screenshot 📷️
+![Image](images/screnshot.png)
+Untuk mencari kata lain yang berkaitan, cukup menekan ` ⌘ + Enter `
+![Image](images/screenshot_full.png)
+
+
+
+## Command List 🤖
+
+` arti atau kata ` = menggunakan workflow    
+` ⌘ + L ` = large type arti kata 
+` ⌘ + C ` = copy hasil definisi kata
+
+
+
+## Version 🧑‍🚒
+#### 1.0.0
+• Released versi offline</string>
+	<key>uidata</key>
+	<dict>
+		<key>048808ED-2B4E-4611-8E75-BC802B23006E</key>
+		<dict>
+			<key>xpos</key>
+			<real>220</real>
+			<key>ypos</key>
+			<real>385</real>
+		</dict>
+		<key>230F215D-4B21-41AC-8B16-B63199C6BC27</key>
+		<dict>
+			<key>xpos</key>
+			<real>660</real>
+			<key>ypos</key>
+			<real>340</real>
+		</dict>
+		<key>2A6C8B8D-8094-4248-9C39-A36F01C29E26</key>
+		<dict>
+			<key>xpos</key>
+			<real>155</real>
+			<key>ypos</key>
+			<real>95</real>
+		</dict>
+		<key>42694EAE-6D4C-4954-B3A8-D9C0B59B9F21</key>
+		<dict>
+			<key>xpos</key>
+			<real>350</real>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>83A66FB4-1D91-4D94-90F0-7CDD3C116F8D</key>
+		<dict>
+			<key>xpos</key>
+			<real>625</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>E0F26C5E-058E-479D-AB84-6799DC41641C</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>425</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>Ya</string>
+						<string>True</string>
+					</array>
+					<array>
+						<string>Tidak</string>
+						<string>False</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Pilih "Ya" untuk menampilkan sugesti kata yang mirip, bila "Tidak" maka hanya ditampilkan satu kata sesuai pencarian (akses lebih cepat)</string>
+			<key>label</key>
+			<string>Sugesti Pencarian kata</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>suggestion_option</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/afridho</string>
+</dict>
+</plist>
