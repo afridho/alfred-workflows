@@ -24,5 +24,9 @@ Untuk mencari kata lain yang berkaitan, cukup menekan `⌘ + Enter`
 
 
 ## Version :firefighter:
+#### 1.2.0
+* Membersihkan duplikat kata
+* Menghilangkan proses parsing kata (lebih cepat)
+
 #### 1.0.0
 * Released versi offline

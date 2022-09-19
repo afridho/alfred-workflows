@@ -1,7 +1,6 @@
 from __future__ import division, print_function, absolute_import
 import json
 import sys
-import re
 from importlib import reload
 reload(sys)
 import sqlite3
@@ -11,16 +10,11 @@ connection = sqlite3.connect(databaseFile)
 cursor = connection.cursor()
     
 def view_data(search_text=None):
-    rows = cursor.execute(f"SELECT * FROM kamus WHERE kata = '{search_text}' limit 1").fetchall()
+    rows = cursor.execute(f"SELECT * FROM kamus WHERE lower(kata) = '{search_text}' limit 1").fetchall()
     if (len(rows) == 1):
         return rows
     else:
-        return cursor.execute(f"SELECT * FROM kamus WHERE kata LIKE '%{search_text}%'").fetchall()
-
-def clean_text(text):
-    """Remove html tags from a string"""
-    compile = re.sub("<b>.*?</b> ", "", text).replace('<b>','').replace('</b>','').replace('<i>','').replace('</i>','')
-    return compile
+        return cursor.execute(f"SELECT * FROM kamus WHERE lower(kata) LIKE '%{search_text}%'").fetchall()
 
 def save_text(search=None):
     data = view_data(search)  
@@ -29,15 +23,17 @@ def save_text(search=None):
         for i in data:
             result.append({
                 'title': i[1].capitalize(),
-                'subtitle' : clean_text(i[2]).replace('\n',' '),
+                'subtitle' : i[2].replace('\n',' '),
+                'valid' : True if len(data) <= 1 else False,
                 'arg' : i[2],
+                'autocomplete': i[1],
                 'mods':{
                     'cmd' : {
-                        'subtitle' : clean_text(i[2]).replace('\n',' ')
+                        'subtitle' : i[2].replace('\n',' ')
                     }
                 },
                 'text' : {
-                    'largetype' : clean_text(i[2]) # no need to replace new line
+                    'largetype' : i[2] # no need to replace new line
                 }
             })
     else:
