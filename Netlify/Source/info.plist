@@ -847,8 +847,8 @@ echo -n $query</string>
 				<string></string>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist='https://raw.githubusercontent.com/afridho/alfred-workflows/master/Arti%20Kata%20(KBBI)%20-%20Offline/Source/info.plist'
-readonly workflow_url='https://github.com/afridho/alfred-workflows/raw/master/Arti%20Kata%20(KBBI)%20-%20Offline/Arti%20Kata%20(KBBI)%20-%20Offilne.alfredworkflow'
+readonly remote_info_plist='https://raw.githubusercontent.com/afridho/alfred-workflows/master/Netlify/Source/info.plist'
+readonly workflow_url='https://github.com/afridho/alfred-workflows/raw/master/Netlify/Netlify.alfredworkflow'
 readonly download_type='direct'
 readonly frequency_check='3'
 
