@@ -1,66 +1,117 @@
-# -*- coding: utf-8 -*-
-
+#!/usr/bin/python
+# encoding: utf-8
+#
+# Copyright (c) 2022 Ridho Zega
+#
+# MIT License. See http://opensource.org/licenses/MIT
+#
+from __future__ import division, print_function, absolute_import
+import json
 import sys
 import requests
-import json
-import datetime
+from importlib import reload
+requests.packages.urllib3.disable_warnings()
+reload(sys)
 import os
-import datetime as dt
-from workflow import Workflow
+from utils import get_data
 
+resi_number = os.environ['resi_number']
+icon_name = os.environ['logo_icon'] if "logo_icon" in os.environ else 'icon.png'
 
-def get_recent_projects(resi):
-    url = 'https://content-main-api-production.sicepat.com/public/check-awb/'+resi
-    response = requests.request("GET", url)
-    posts = response.json()
-    return posts
 
 def delivered(status):
-    if status == "ANT":
-        return (u'🛵')
+    if status.lower() == "delivered":
+        return (u'💯')
     else:
         return ''
 
-def status(status):
-    if status == "PICKREQ":
-        return (status+' '+u'🥡')
-    elif status =="PICK":
-        return (status+' '+u'🛻')
-    elif status =="IN":
-        return (status+' '+u'🔼')
-    elif status =="OUT":
-        return (status+' '+u'🔽')
-    else:
-        return (status)
+def status_icon(status):
+    switcher = {
+        'PICKREQ': "🥡",
+        'PICK' : '🛻',
+        'IN' : '🔼',
+        'OUT': '🔽',
+        'ANT' : '🛵',
+        'UNPICK' : '🗃️',
+        'CANCEL' : '😥',
+        'DELIVERED' : ''
+    }
+    status_icon = switcher.get(status, status)
+    return (f"{status} {status_icon}")
+    
+def data_dummy():
+    fileJson = f"response_dummy.json"
+    f = open(fileJson)
+    resi_saved = json.load(f)
+    return resi_saved
 
-def main(wf):
+def details(query=None):
+    data_options = get_data.from_file(resi_number)
+    # data_options = data_dummy()
+    # data_options = []
+    
+    data_result = data_options['sicepat']['result']['track_history']
+    posts = sorted(data_result, key=lambda k: k['date_time'], reverse=True)
+    
+    # variables
+    result = []
+    
+    if 'new_resi' in os.environ and posts[0]['status'] != "DELIVERED":
+        result.append({
+                    'title':f"{'Add resi number » type your product name to save ☑︎' if len(query) == 0 else ('save ' +  query + '✅')}",
+                    'subtitle': f"No resi: {resi_number}",
+                    'valid': False if len(query) == 0 else True,
+                    'arg' : 'save',
+                    'icon': {
+                        'path' : 'icons/add_icon.png'
+                    },
+                    'variables' : {
+                                'resi_number' :  resi_number,
+                                'product_name' : query
+                            },
+                    })
+        if len(query) > 0 and query != resi_number:
+            posts = []
+    
+    for post in posts:
+        result.append({
+                    'title':f"{(post['city'] if 'city' in post else post['receiver_name']) + delivered(post['status'])}",
+                    'subtitle': f"{status_icon(post['status'])}   ||   {post['date_time']}",
+                    'valid':True,
+                    'icon' : {
+                        'path' : f"{icon_name}",
+                    },
+                    'text' : {
+                        'largetype' : f"{(post['city'] if 'city' in post else post['receiver_name']) + delivered(post['status'])}",
+                    },
+                    'mods' : {
+                        'cmd' : {
+                            'subtitle':f"{(post['city'] if 'city' in post else post['receiver_name']) + delivered(post['status'])}",
+                        }
+                    }
+                    })
+    if len(query) == 0 or query == resi_number:
+        result.append({
+                        'title':'Back',
+                        'subtitle':'',
+                        'icon': {
+                            'path' : 'icons/back.png',
+                        },
+                        'arg' : 'back',
+                        'valid':True
+            
+                        })
+                    
+            
+    return result
 
- # Get query from Alfred
- if len(wf.args):
-     query = wf.args[0]
- else:
-     query = None
-   
- result = get_recent_projects(query)
+def main():
+    SEARCH = sys.argv[1] if len(sys.argv) >= 2 else None
+    posts  = details(query=SEARCH)
+    data = json.dumps({"items": posts }, indent=4)
+    print(data)
 
- if result['sicepat']['result']['last_status']['status'] == "DELIVERED":
-    data_result = result['sicepat']['result']['track_history'][:-1]
- else:
-    data_result = result['sicepat']['result']['track_history']
-   
- posts = sorted(data_result, key=lambda k: k['date_time'], reverse=True)
-
- for post in posts:
-    wf.add_item(
-                 title=post['city']+' '+delivered(post['status']),
-                 subtitle=status(post['status']) + '     |     '+post['date_time'],
-                 largetext=post['city'],
-                 valid='True',
-                 )
- # Send the results to Alfred as XML
- wf.send_feedback()
-
-
-if __name__ == u"__main__":
- wf = Workflow()
- sys.exit(wf.run(main))
+if __name__ == '__main__':
+    main()
+    # get_data_options()
+    # settings()
